@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LinkRemind</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f5f5f5; color: #333; }
+  .container { max-width: 480px; margin: 0 auto; padding: 60px 20px; text-align: center; }
+  .icon { font-size: 64px; margin-bottom: 16px; }
+  h1 { font-size: 1.8rem; margin-bottom: 8px; }
+  .tagline { color: #666; margin-bottom: 32px; }
+  .badge { display: inline-block; margin: 8px; }
+  .badge img { height: 60px; }
+  .features { text-align: left; margin: 32px 0; padding: 0 16px; }
+  .features li { margin-bottom: 8px; line-height: 1.6; }
+  .footer { margin-top: 48px; font-size: 0.8rem; color: #999; }
+  .footer a { color: #999; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="icon">🔗</div>
+  <h1>LinkRemind</h1>
+  <p class="tagline">保存したリンク、もう忘れない。<br>Never forget saved links.</p>
+
+  <div>
+    <a class="badge" href="https://play.google.com/store/apps/details?id=com.arigatouapps.url_reminder">
+      <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
+    </a>
+  </div>
+
+  <ul class="features">
+    <li>📥 ワンタップでURL保存 / Save URLs with one tap</li>
+    <li>🔔 忘却曲線ベースのスマートリマインド / Smart reminders based on forgetting curve</li>
+    <li>📁 フォルダで整理 / Organize with folders</li>
+    <li>📤 フォルダをSNSでシェア / Share folder collections</li>
+    <li>🔒 データは端末内のみ / All data stays on your device</li>
+  </ul>
+
+  <p class="footer">
+    <a href="privacy-policy.html">Privacy Policy / プライバシーポリシー</a><br>
+    &copy; ArigatouApps
+  </p>
+</div>
+
+<script>
+// Deep link handler: redirect to app or show landing page
+const path = window.location.pathname;
+const match = path.match(/\/linkremind\/s\/(.+)/);
+if (match) {
+  // Try to open the app via custom scheme
+  window.location.href = 'linkremind://import/' + match[1];
+  // If app not installed, user stays on this page
+}
+</script>
+</body>
+</html>

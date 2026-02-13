@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.arigatouapps.url_reminder",
+      "sha256_cert_fingerprints": [
+        "92:1E:C2:5C:7C:74:04:D9:1B:FB:B1:B0:4F:41:AB:70:88:1F:BC:B0:CB:5E:2E:F8:83:F3:43:50:5C:E2:A5:B8"
+      ]
+    }
+  }
+]
